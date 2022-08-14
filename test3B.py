@@ -25,7 +25,7 @@ def open_popup():
     B = Button(pop, text="CANCEL", command=pop.destroy)
     B.place(x=200, y=200)
     count=0
-    errorlabel = Label(pop, text="You have only 4 attempt(s) left.", font=('Mistral 10 bold'))
+    errorlabel = Label(pop, text="You have 3 attempts.", font=('Mistral 10 bold'))
     errorlabel.place(x=300, y=45)
 
     # errorlabel.update()
