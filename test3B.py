@@ -21,11 +21,11 @@ def open_popup():
 
     #while password != 'Forensic1':
     pop= Toplevel(top)
-    pop.attributes('-fullscreen', False)
+    pop.attributes('-fullscreen', True)
     B = Button(pop, text="CANCEL", command=pop.destroy)
     B.place(x=200, y=200)
     B1 =  Button(pop, text="QUIT", command=QUIT)
-
+    B1.place(x=300, y=200)
     def printvalue():
         password=entry.get()
         Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
