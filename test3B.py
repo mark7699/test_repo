@@ -15,10 +15,10 @@ label=tk.Label(top, image=logo)
 label.place(relx=0.5,rely=0.2,anchor='n')
 top.attributes('-fullscreen', True)
 
-
+global count
 
 def open_popup():
-
+    global count
     #while password != 'Forensic1':
     pop= Toplevel(top)
     pop.attributes('-fullscreen', True)
