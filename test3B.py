@@ -36,7 +36,7 @@ def open_popup():
     B2 = Button(pop, text="Enter Password", command=printvalue).place(x=400, y=200)
     Label(pop, text="Please Enter Password", font=('Mistral 10 bold')).place(x=150, y=100)
     entry = Entry(pop, show="*", width=20)
-    entry.place(x=150, y=200)
+    entry.place(x=150, y=150)
     # entry.pack()
 
 
