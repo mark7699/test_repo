@@ -29,6 +29,7 @@ def open_popup():
     count=0
     errorlabel = Label(pop, text=count, font=('Mistral 10 bold'))
     errorlabel.place(x=150, y=50)
+    errorlabel.update()
     def printvalue():
         global count
         password=entry.get()
