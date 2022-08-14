@@ -27,7 +27,8 @@ def open_popup():
     B1 =  Button(pop, text="QUIT", command=quit)
     B1.place(x=300, y=200)
     count=0
-    errorlabel = Label(pop, text=count, font=('Mistral 10 bold')).place(x=150, y=50)
+    errorlabel = Label(pop, text=count, font=('Mistral 10 bold'))
+    errorlabel.place(x=150, y=50)
     def printvalue():
         global count
         password=entry.get()
