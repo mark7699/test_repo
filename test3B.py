@@ -18,7 +18,7 @@ top.attributes('-fullscreen', True)
 global count
 
 def open_popup():
-    global count
+    global count, errorlabel
     #while password != 'Forensic1':
     pop= Toplevel(top)
     pop.attributes('-fullscreen', True)
@@ -29,9 +29,9 @@ def open_popup():
     count=0
     errorlabel = Label(pop, text=count, font=('Mistral 10 bold'))
     errorlabel.place(x=150, y=50)
-    errorlabel.update()
+    # errorlabel.update()
     def printvalue():
-        global count
+        global count, errorlabel
         password=entry.get()
 
         if password=="Forensic1":
@@ -40,7 +40,10 @@ def open_popup():
             count+=1
             if count==3:
                 pop.destroy()
-            errorlabel.text=str(count) + "WRONG PASSWORD"
+            # errorlabel.text=str(count) + "WRONG PASSWORD"
+            errorlabel.destroy()
+            errorlabel = Label(pop, text=str(count) + "WRONG PASSWORD", font=('Mistral 10 bold'))
+            errorlabel.place(x=150, y=50)
 
         Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
         Label(pop, text=f'Password={password}', font=('Mistral 10 bold')).place(x=50,y=40)
