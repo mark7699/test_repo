@@ -41,12 +41,10 @@ def open_popup():
             if count==3:
                 pop.destroy()
             # errorlabel.text=str(count) + "WRONG PASSWORD"
+            countleft = 3-count
             errorlabel.destroy()
-            errorlabel = Label(pop, text=str(count) + " WRONG PASSWORD", font=('Mistral 10 bold'))
+            errorlabel = Label(pop, text= "You have only" + str(countleft) + "attempts left.", font=('Mistral 10 bold'))
             errorlabel.place(x=300, y=45)
-
-        Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
-        Label(pop, text=f'Password={password}', font=('Mistral 10 bold')).place(x=50,y=40)
         entry.delete(0, END)
 
     B2 = Button(pop, text="Enter Password", command=printvalue).place(x=400, y=200)
