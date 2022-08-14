@@ -24,11 +24,7 @@ def open_popup():
     pop.attributes('-fullscreen', True)
     B = Button(pop, text="CANCEL", command=pop.destroy)
     B.place(x=200, y=200)
-    B1 =  Button(pop, text="QUIT", command=quit)
-    B1.place(x=300, y=200)
     count=0
-    errorlabel = Label(pop, text=count, font=('Mistral 10 bold'))
-    errorlabel.place(x=300, y=45)
     # errorlabel.update()
     def printvalue():
         global count, errorlabel
@@ -43,7 +39,7 @@ def open_popup():
             # errorlabel.text=str(count) + "WRONG PASSWORD"
             countleft = 3-count
             errorlabel.destroy()
-            errorlabel = Label(pop, text= "You have only" + str(countleft) + "attempts left.", font=('Mistral 10 bold'))
+            errorlabel = Label(pop, text= "You have only " + str(countleft) + " attempt(s) left.", font=('Mistral 10 bold'))
             errorlabel.place(x=300, y=45)
         entry.delete(0, END)
 
