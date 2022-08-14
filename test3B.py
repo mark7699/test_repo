@@ -18,34 +18,34 @@ top.attributes('-fullscreen', True)
 
 
 def open_popup():
-	 
-	#while password != 'Forensic1':
-		
-	def printvalue():
-		password=entry.get()
-		Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
-		Label(pop, text=f'Password={password}', font=('Mistral 10 bold')).place(x=50,y=40)
-		entry.delete(0, END)
 
-	Lable(pop, text= "WRONG PASSWORD", font=('Mistral 10 bold')).place(x=50,y=60)
-	top.attributes('-fullscreen', False)
-	top.geometry("2000x2000") 
-	pop= Toplevel(top)
-	pop.geometry("750x250")
-	pop.title("Enter Password TO Exit")
-	top.attributes('-fullscreen', True) 
-	B=Button(pop,text="CANCEL", command=pop.destroy)
-	B.place(x=200,y=200)
-	count=0
-	B=Button(pop,text="Enter Password", command=printvalue).place(x=300,y=200)
-	Label(pop,text= "Please Enter Password", font=('Mistral 10 bold')).place(x=150,y=100)
-	entry = Entry(pop, show="*", width=20)
-	entry.pack()
-	pop.attributes('-fullscreen', True)     
-	top.attributes('-fullscreen', True)
-	count +=1
-	 #else:    
-		#command=quit
+    #while password != 'Forensic1':
+
+    def printvalue():
+        password=entry.get()
+        Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
+        Label(pop, text=f'Password={password}', font=('Mistral 10 bold')).place(x=50,y=40)
+        entry.delete(0, END)
+
+    Lable(pop, text= "WRONG PASSWORD", font=('Mistral 10 bold')).place(x=50,y=60)
+    top.attributes('-fullscreen', False)
+    top.geometry("2000x2000")
+    pop= Toplevel(top)
+    pop.geometry("750x250")
+    pop.title("Enter Password TO Exit")
+    top.attributes('-fullscreen', True)
+    B=Button(pop,text="CANCEL", command=pop.destroy)
+    B.place(x=200,y=200)
+    count=0
+    B=Button(pop,text="Enter Password", command=printvalue).place(x=300,y=200)
+    Label(pop,text= "Please Enter Password", font=('Mistral 10 bold')).place(x=150,y=100)
+    entry = Entry(pop, show="*", width=20)
+    entry.pack()
+    pop.attributes('-fullscreen', True)
+    top.attributes('-fullscreen', True)
+    count +=1
+     #else:
+        #command=quit
 
 def readcard():
 
