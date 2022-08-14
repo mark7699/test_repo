@@ -20,6 +20,7 @@ top.attributes('-fullscreen', True)
 def open_popup():
 
     #while password != 'Forensic1':
+    pop= Toplevel(top)
 
     def printvalue():
         password=entry.get()
@@ -30,7 +31,6 @@ def open_popup():
     Lable(pop, text= "WRONG PASSWORD", font=('Mistral 10 bold')).place(x=50,y=60)
     top.attributes('-fullscreen', False)
     top.geometry("2000x2000")
-    pop= Toplevel(top)
     pop.geometry("750x250")
     pop.title("Enter Password TO Exit")
     top.attributes('-fullscreen', True)
@@ -44,8 +44,8 @@ def open_popup():
     pop.attributes('-fullscreen', True)
     top.attributes('-fullscreen', True)
     count +=1
-     #else:
-        #command=quit
+    # else:
+    #     command=quit
 
 def readcard():
 
