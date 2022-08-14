@@ -26,29 +26,21 @@ def open_popup():
     B.place(x=200, y=200)
     B1 =  Button(pop, text="QUIT", command=quit)
     B1.place(x=300, y=200)
+    
     def printvalue():
         password=entry.get()
         Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
         Label(pop, text=f'Password={password}', font=('Mistral 10 bold')).place(x=50,y=40)
         entry.delete(0, END)
 
-    Lable(pop, text= "WRONG PASSWORD", font=('Mistral 10 bold')).place(x=50,y=60)
-
-    top.geometry("2000x2000")
-    pop.geometry("750x250")
-    pop.title("Enter Password TO Exit")
-    top.attributes('-fullscreen', True)
-
-    count=0
-    B=Button(pop,text="Enter Password", command=printvalue).place(x=300,y=200)
-    Label(pop,text= "Please Enter Password", font=('Mistral 10 bold')).place(x=150,y=100)
+    B2 = Button(pop, text="Enter Password", command=printvalue).place(x=400, y=200)
+    Label(pop, text="Please Enter Password", font=('Mistral 10 bold')).place(x=150, y=100)
     entry = Entry(pop, show="*", width=20)
     entry.pack()
-    pop.attributes('-fullscreen', True)
-    top.attributes('-fullscreen', True)
-    count +=1
-    # else:
-    #     command=quit
+
+
+
+
 
 def readcard():
 
