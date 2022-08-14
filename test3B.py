@@ -28,7 +28,7 @@ def open_popup():
     B1.place(x=300, y=200)
     count=0
     errorlabel = Label(pop, text=count, font=('Mistral 10 bold'))
-    errorlabel.place(x=150, y=50)
+    errorlabel.place(x=300, y=45)
     # errorlabel.update()
     def printvalue():
         global count, errorlabel
@@ -42,8 +42,8 @@ def open_popup():
                 pop.destroy()
             # errorlabel.text=str(count) + "WRONG PASSWORD"
             errorlabel.destroy()
-            errorlabel = Label(pop, text=str(count) + "WRONG PASSWORD", font=('Mistral 10 bold'))
-            errorlabel.place(x=150, y=50)
+            errorlabel = Label(pop, text=str(count) + " WRONG PASSWORD", font=('Mistral 10 bold'))
+            errorlabel.place(x=300, y=45)
 
         Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
         Label(pop, text=f'Password={password}', font=('Mistral 10 bold')).place(x=50,y=40)
