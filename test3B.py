@@ -24,6 +24,7 @@ def open_popup():
     pop.attributes('-fullscreen', False)
     B = Button(pop, text="CANCEL", command=pop.destroy)
     B.place(x=200, y=200)
+    B1 =  Button(pop, text="QUIT", command=QUIT)
 
     def printvalue():
         password=entry.get()
