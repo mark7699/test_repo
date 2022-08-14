@@ -26,7 +26,7 @@ def open_popup():
     B.place(x=200, y=200)
     B1 =  Button(pop, text="QUIT", command=quit)
     B1.place(x=300, y=200)
-    
+
     def printvalue():
         password=entry.get()
         Label(pop, text=f'                                                      ', font=('Mistral 10 bold'))
@@ -36,7 +36,8 @@ def open_popup():
     B2 = Button(pop, text="Enter Password", command=printvalue).place(x=400, y=200)
     Label(pop, text="Please Enter Password", font=('Mistral 10 bold')).place(x=150, y=100)
     entry = Entry(pop, show="*", width=20)
-    entry.pack()
+    entry.place(x=150, y=200)
+    # entry.pack()
 
 
 
