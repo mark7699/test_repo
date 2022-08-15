@@ -81,9 +81,9 @@ def run_guymager():
   subprocess.call(command, shell=True) 
 
 def iPhone():
-  p=subprocess.Popen("idevice_id", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0] 
-  p=p.split()[0].decode("utf-8")
   msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on and lead plugged in")
+  p=subprocess.Popen("idevice_id -l", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+  p=p.split()[0].decode("utf-8")
   msg=messagebox.showinfo("iPhone Forensics USB ID", (p))
 
   
