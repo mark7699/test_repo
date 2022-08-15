@@ -47,7 +47,7 @@ def open_popup():
         entry.delete(0, END)
 
     B2 = Button(pop, text="Enter Password", command=printvalue).place(x=400, y=200)
-    Label(pop, text="Please Enter Password", font=('Mistral 10 bold')).place(x=150, y=100)
+    Label(pop, text="Please enter password to quit the EFS1 console", font=('Mistral 10 bold')).place(x=150, y=100)
     entry = Entry(pop, show="*", width=20)
     entry.place(x=150, y=150)
     # entry.pack()
@@ -83,7 +83,7 @@ def run_guymager():
 def iPhone():
   p=subprocess.Popen("idevice_id", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0] 
   p=p.split()[0].decode("utf-8")
-  msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on and lead pluged in")
+  msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on and lead plugged in")
   msg=messagebox.showinfo("iPhone Forensics USB ID", (p))
 
   
@@ -103,7 +103,14 @@ def iPhone():
  # while (q) != "Backup Successful.":
  #     Label(newWindow, text=(q))
   msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored in /home/kalie/CaseData")
+  #python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
 
+  command="cd /Downloads/iLEAPP-master"
+  ileapp1="python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/"
+  iPhoneReport=ileapp1+p
+  command=iPhoneReport
+  subprocess.call(command, shell=True)
+  msg = messagebox.showinfo("REPORT COMPLETE", "HTML report completed of" + (p) + "& stored in /home/kalie/CaseData")
 
 B=Button(top,text="KAYAK\n(CAN)",fg="white",bg="blue", height=3, width=6, command=helloCallBack)
 B.place(x=50,y=150)
