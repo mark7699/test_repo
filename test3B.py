@@ -91,14 +91,13 @@ def iPhone():
   v1="idevicebackup2 -u "
   v2=" backup --full /home/kali/CaseData"
   iD=v1+p+v2
+  msg=messagebox.showinfo("iD Value","iD="+(iD))
   command=iD
   subprocess.call(command, shell=True)
-  msg=messagebox.showinfo("iD Value","iD="+(iD))
-  top.iconify()
-
-
+  
   msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
-  #ileapp command=python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
+  top.iconify()
+  #ileapp python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
 
   #command="cd /Downloads/iLEAPP-master"
   #ileapp1="python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/"
