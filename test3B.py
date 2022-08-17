@@ -100,16 +100,16 @@ def iPhone():
   msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
   #ileapp command=python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
 
-  command="cd /Downloads/iLEAPP-master"
-  ileapp1="python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/"
-  iPhoneReport=ileapp1+p
-  subprocess.call(command, shell=True)
-  top.deiconify()
-  p2 = subprocess.Popen(iPhoneReport, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
-  p2 =p2.split()[0].decode("utf-8")
-  subprocess.call(command, shell=True)
-  top.deiconify()
-  msg = messagebox.showinfo("REPORT COMPLETE", "HTML report completed of" + (p) + "& stored as"+p2)
+  #command="cd /Downloads/iLEAPP-master"
+  #ileapp1="python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/"
+  #iPhoneReport=ileapp1+p
+  #subprocess.call(command, shell=True)
+  #top.deiconify()
+  #p2 = subprocess.Popen(iPhoneReport, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+  #p2 =p2.split()[0].decode("utf-8")
+  #subprocess.call(command, shell=True)
+  #top.deiconify()
+  #msg = messagebox.showinfo("REPORT COMPLETE", "HTML report completed of" + (p) + "& stored as"+p2)
 
 B=Button(top,text="KAYAK\n(CAN)",fg="white",bg="blue", height=3, width=6, command=helloCallBack)
 B.place(x=50,y=150)
