@@ -92,6 +92,7 @@ def iPhone():
   v2=" backup --full /home/kali/CaseData"
   iD=v1+p+v2
   command=iD
+  subprocess.call(command, shell=True)
   msg=messagebox.showinfo("iD Value","iD="+(iD))
   top.iconify()
 
@@ -104,7 +105,7 @@ def iPhone():
   iPhoneReport=ileapp1+p
   subprocess.call(command, shell=True)
   top.deiconify()
-  p2 = subprocess.Popen( iPhoneReport, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+  p2 = subprocess.Popen(iPhoneReport, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
   p2 =p2.split()[0].decode("utf-8")
   subprocess.call(command, shell=True)
   top.deiconify()
