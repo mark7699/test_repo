@@ -83,6 +83,8 @@ def run_guymager():
 def iPhone():
   msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on, lead plugged in and you select TRUST on the iPhone Screen")
   p=subprocess.Popen("idevice_id -l", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+
+  print(p.split())
   p=p.split()[0].decode("utf-8")
   msg=messagebox.showinfo("iPhone Forensics USB ID", (p))
 
