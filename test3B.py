@@ -81,36 +81,32 @@ def run_guymager():
   subprocess.call(command, shell=True) 
 
 def iPhone():
-  msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on and lead plugged in")
+  msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on, lead plugged in and you select TRUST on the iPhone Screen")
   p=subprocess.Popen("idevice_id -l", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
   p=p.split()[0].decode("utf-8")
   msg=messagebox.showinfo("iPhone Forensics USB ID", (p))
 
-  
- 
   v1="idevicebackup2 -u "
   v2=" backup --full /home/kali/CaseData"
   iD=v1+p+v2
   command=iD
   msg=messagebox.showinfo("iD Value","iD="+(iD))
   top.iconify()
-  subprocess.call(command, shell=True)
-  
-  
-  # q=subprocess.Popen((iD), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]  
-  top.deiconify()
 
- # while (q) != "Backup Successful.":
- #     Label(newWindow, text=(q))
-  msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored in /home/kalie/CaseData")
-  #python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
+
+  msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at"+p2)
+  #ileapp command=python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
 
   command="cd /Downloads/iLEAPP-master"
   ileapp1="python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/"
   iPhoneReport=ileapp1+p
-  command=iPhoneReport
   subprocess.call(command, shell=True)
-  msg = messagebox.showinfo("REPORT COMPLETE", "HTML report completed of" + (p) + "& stored in /home/kalie/CaseData")
+  top.deiconify()
+  p2 = subprocess.Popen( iPhoneReport, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+  p2 = p2.split()[0].decode("utf-8")
+  subprocess.call(command, shell=True)
+  top.deiconify()
+  msg = messagebox.showinfo("REPORT COMPLETE", "HTML report completed of" + (p) + "& stored as"+p2)
 
 B=Button(top,text="KAYAK\n(CAN)",fg="white",bg="blue", height=3, width=6, command=helloCallBack)
 B.place(x=50,y=150)
