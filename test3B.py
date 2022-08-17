@@ -96,7 +96,7 @@ def iPhone():
     subprocess.call(command, shell=True)
     msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
-def iPhon_Parser
+def iPhon_Parser():
     global p2
   #ileapp python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
 
