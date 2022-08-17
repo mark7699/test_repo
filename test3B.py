@@ -83,8 +83,6 @@ def run_guymager():
 def iPhone():
   msg=messagebox.showinfo("iPhone Forensics", "Please Ensure iPhone is on, lead plugged in and you select TRUST on the iPhone Screen")
   p=subprocess.Popen("idevice_id -l", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
-
-  print(p, p.split())
   p=p.split()[0].decode("utf-8")
   msg=messagebox.showinfo("iPhone Forensics USB ID", (p))
 
@@ -94,7 +92,7 @@ def iPhone():
   msg=messagebox.showinfo("iD Value","iD="+(iD))
   command=iD
   subprocess.call(command, shell=True)
-  
+
   msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
   top.iconify()
   #ileapp python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
