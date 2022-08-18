@@ -24,7 +24,7 @@ def open_popup():
     pop.attributes('-fullscreen', True)
     B = Button(pop, text="CANCEL", command=pop.destroy)
     B.place(x=200, y=200)
-    B = Button(pop, text="POWER\n OFF", bg="red", height=3, width=6,command="shutdown -p")
+    B = Button(pop, text="POWER\n OFF", bg="red", height=3, width=6,command="shutdown -P")
     B.place(x=350, y=400)
     count=0
     errorlabel = Label(pop, text="You have 3 attempts.", font=('Mistral 10 bold'))
