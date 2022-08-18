@@ -26,7 +26,6 @@ def open_popup():
     B.place(x=200, y=200)
     B = Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command="poweroff")
     B.place(x=350, y=400)
-    subprocess.call(command, shell=True)
     count=0
     errorlabel = Label(pop, text="You have 3 attempts.", font=('Mistral 10 bold'))
     errorlabel.place(x=300, y=45)
