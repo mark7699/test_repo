@@ -22,9 +22,11 @@ def open_popup():
     #while password != 'Forensic1':
     pop= Toplevel(top)
     pop.attributes('-fullscreen', True)
-    B = Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command="poweroff")
-    B.place(x=350, y=400)
+    B1= Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command="poweroff")
+    subprocess.call(command, shell=True)
+    B1.place(x=350, y=400)
     B = Button(pop, text="CANCEL", command=pop.destroy)
+    subprocess.call(command, shell=True)
     B.place(x=200, y=200)
     count=0
     errorlabel = Label(pop, text="You have 3 attempts.", font=('Mistral 10 bold'))
