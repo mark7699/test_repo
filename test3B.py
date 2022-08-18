@@ -22,7 +22,11 @@ def open_popup():
     #while password != 'Forensic1':
     pop= Toplevel(top)
     pop.attributes('-fullscreen', True)
-    B4=Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command="poweroff")
+    
+    def _shutdown():
+        command = "poweroff"
+        subprocess.call(command, shell=True)
+    B4=Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command=_shutdown)
     B4.place(x=350, y=400)
     B=Button(pop, text="CANCEL", command=pop.destroy)
     B.place(x=200, y=200)
