@@ -107,10 +107,10 @@ def iPhone():
 def unlock():
     command=gnome-terminal --window --full-screen
     subprocess.call(command, shell=True)
-    msg = messagebox.showinfo("Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here)
+    msg = messagebox.showinfo("Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
     Comannd="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
-    
+
 def iPhon_Parser():
     global p2
   #ileapp python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
