@@ -111,7 +111,7 @@ def Unlock():
         command="sudo ./checkra1n"
         subprocess.call(command, shell=True)
 
-    command=checkra1n()
+    command=checkra1n
     subprocess.call(command, shell=True)
 
 def iPhon_Parser():
