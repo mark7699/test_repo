@@ -61,9 +61,6 @@ def open_popup():
     # entry.pack()
 
 
-
-
-
 def readcard():
 
     command="cardpeek"    
@@ -108,7 +105,8 @@ def Unlock():
     command=gnome-terminal --window --full-screen
     subprocess.call(command, shell=True)
     msg = messagebox.showinfo("Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
-    Comannd="cd Desktop; sudo ./checkra1n"
+        
+    command="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
 
 def iPhon_Parser():
@@ -135,7 +133,7 @@ B.place(x=210,y=150)
 B=Button(top,text="RF\nSCANNER",bg="yellow", height=3, width=6, command=opengqrx)
 B.place(x=290,y=150)
 B=Button(top,text="Unlock\n iPhone",bg="yellow", height=3, width=6, command=Unlock)
-B.place(x=150,y=220)
+B.place(x=210,y=220)
 B=Button(top,text="ANDRIOD",bg="red", height=3, width=6, command=andriod)
 B.place(x=130,y=220)
 B=Button(top,text="READ\nCARD",bg="yellow", height=3, width=6, command=readcard)
