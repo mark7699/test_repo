@@ -104,6 +104,13 @@ def iPhone():
     subprocess.call(command, shell=True)
     msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
+def unlock():
+    command=gnome-terminal --window --full-screen
+    subprocess.call(command, shell=True)
+    msg = messagebox.showinfo("Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here)
+    Comannd="cd Desktop; sudo ./checkra1n"
+    subprocess.call(command, shell=True)
+    
 def iPhon_Parser():
     global p2
   #ileapp python3 ileapp.py -t itunes -o /home/kali/CaseData -i /home/kali/CaseData/00008101-000910441E7A001E
@@ -127,6 +134,8 @@ B=Button(top,text="iPhone",bg="white", height=3, width=6, command=iPhone)
 B.place(x=210,y=150)
 B=Button(top,text="RF\nSCANNER",bg="yellow", height=3, width=6, command=opengqrx)
 B.place(x=290,y=150)
+B=Button(top,text="Unlock\n iPhone",bg="yellow", height=3, width=6, command=Unlock)
+B.place(x=150,y=220)
 B=Button(top,text="ANDRIOD",bg="red", height=3, width=6, command=andriod)
 B.place(x=130,y=220)
 B=Button(top,text="READ\nCARD",bg="yellow", height=3, width=6, command=readcard)
