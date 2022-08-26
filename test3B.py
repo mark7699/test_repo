@@ -102,10 +102,10 @@ def iPhone():
     msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
 def Unlock():
-    command=gnome-terminal --window --full-screen
+    command="gnome-terminal --window --full-screen"
     subprocess.call(command, shell=True)
     msg = messagebox.showinfo("Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
-        
+
     command="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
 
