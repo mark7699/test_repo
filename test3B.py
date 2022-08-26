@@ -106,7 +106,12 @@ def Unlock():
     subprocess.call(command, shell=True)
     msg = messagebox.showinfo("Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
 
-    command="cd Desktop; sudo ./checkra1n"
+
+    def checkra1n():
+        command="cd Desktop; sudo ./checkra1n"
+        subprocess.call(command, shell=True)
+
+    command=checkra1n()
     subprocess.call(command, shell=True)
 
 def iPhon_Parser():
