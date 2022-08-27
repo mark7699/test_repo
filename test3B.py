@@ -103,12 +103,15 @@ def iPhone():
 
 def Unlock():
 
-    #command="cd Desktop; gnome-terminal --window --full-screen; sudo ./checkra1n"
-    #subprocess.call(Popen, shell=True)
-    msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
-    command="gnome-terminal -- window --full-screen", "--working-directory=/Desktop",
-                      '--command="sudo ./checkra1n"'
+    command="gnome-terminal --window --full-screen"
     subprocess.call(command, shell=True)
+    command="cd Desktop"
+    subprocess.call(command, shell=True)
+    command="sudo checkra1n"
+    subprocess.call(command, shell=True)
+    msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
+
+
 
 def iPhon_Parser():
     global p2
