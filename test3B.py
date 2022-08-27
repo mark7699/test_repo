@@ -106,7 +106,7 @@ def Unlock():
     top.iconify()
     command="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
-
+    top.deiconify()
 
 
 def iPhon_Parser():
