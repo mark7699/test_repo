@@ -103,9 +103,7 @@ def iPhone():
 
 def Unlock():
 
-    command="gnome-terminal --window --full-screen"
-    subprocess.call(command, shell=True)
-    command="cd Desktop"
+    command="gnome-terminal --window --full-screen; cd Desktop"
     subprocess.call(command, shell=True)
     command="sudo ./checkra1n"
     subprocess.call(command, shell=True)
