@@ -107,7 +107,7 @@ def Unlock():
     subprocess.call(command, shell=True)
     command="cd Desktop"
     subprocess.call(command, shell=True)
-    command="sudo checkra1n"
+    command="sudo ./checkra1n"
     subprocess.call(command, shell=True)
     msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
 
