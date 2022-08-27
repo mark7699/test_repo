@@ -102,14 +102,12 @@ def iPhone():
     msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
 def Unlock():
-    command="cd Desktop; gnome-terminal --window --full-screen; sudo ./checkra1n"
+    subprocess.Popen(["gnome-terminal -- window --full-screen", "--working-directory=/home/kali/Desktop",
+                      '--command="sudo ./checkra1n"'])
+    #command="cd Desktop; gnome-terminal --window --full-screen; sudo ./checkra1n"
     subprocess.call(command, shell=True)
     msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
 
-
-    def checkra1n():
-        command="sudo ./checkra1n"
-        subprocess.call(command, shell=True)
 
 
 def iPhon_Parser():
