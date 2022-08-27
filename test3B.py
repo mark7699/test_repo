@@ -103,9 +103,10 @@ def iPhone():
 
 def Unlock():
     msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n Note add DFU Instructions here")
+    top.iconify()
     command="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
-    top.deiconify()
+
 
 
 def iPhon_Parser():
