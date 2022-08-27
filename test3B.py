@@ -20,7 +20,7 @@ global count
 def open_popup():
     global count, errorlabel
     #while password != 'Forensic1':
-    pop= Toplevel(top)
+    pop=Toplevel(top)
     pop.attributes('-fullscreen', True)
 
     def _shutdown():
@@ -102,10 +102,10 @@ def iPhone():
     msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
 def Unlock():
-    #top.geometry("400x600")
+    top = Toplevel(pop)
     top.attributes('-fullscreen', True)
     top.option_add('*Font', 'Arial 9')
-    msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n he list of supported devices includes:\n iPhone 5s, iPhone 6, iPhone SE, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, Most iPads based on similar SoC, Apple TV HD (ATV4), Apple V 4K, Apple Watch series 1, 2 and 3\n To enter DFU mode\n A10 devices (iPhone 7 and iPhone 7 Plus, iPad 2018, iPod touch 7)\n 1.Connect the device using a USB cable., 2. Hold down both the Side button and Volume Down button., After 8 seconds, release the Side button while continuing to hold down the Volume Down button., If the Apple logo appears, the Side button was held down for too long., Nothing will be displayed on the screen when the device is in DFU mode. If open, iTunes will alert you that a device was detected in recovery mode., If your device shows a screen telling you to connect the device to iTunes, retry these steps.\n A11 and newer devices (iPhone 8 and above, iPad Pro 2018, iPad Air 2019, iPad Mini 2019):\n Connect the device using a USB cable., Quick-press the Volume Up button, Quick-press the Volume Down button, Hold down the Side button until the screen goes black, then hold down both the Side button and Volume Down button., After 5 seconds, release the Side button while continuing to hold down the Volume Down button., If the Apple logo appears, the Side button was held down for too long., Nothing will be displayed on the screen when the device is in DFU mode. If open, iTunes will alert you that a device was detected in recovery mode.\n Apple Watch, Connect to computer via iBUS adapter and lightning cable, Hold crown and power button (bottom right), Wait for the screen to go black, After 3 seconds of black, let go of the power button but continue to hold the crown, After about 5 seconds your watch will be in DFU mode")
+    msg = messagebox.showinfo(" Unlock iPhone", "Connect iPhone with USB and place in DFU mode\n The list of supported devices includes:\n iPhone 5s, iPhone 6, iPhone SE, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, Most iPads based on similar SoC, Apple TV HD (ATV4), Apple V 4K, Apple Watch series 1, 2 and 3\n To enter DFU mode\n A10 devices (iPhone 7 and iPhone 7 Plus, iPad 2018, iPod touch 7)\n 1.Connect the device using a USB cable., 2. Hold down both the Side button and Volume Down button., After 8 seconds, release the Side button while continuing to hold down the Volume Down button., If the Apple logo appears, the Side button was held down for too long., Nothing will be displayed on the screen when the device is in DFU mode. If open, iTunes will alert you that a device was detected in recovery mode., If your device shows a screen telling you to connect the device to iTunes, retry these steps.\n A11 and newer devices (iPhone 8 and above, iPad Pro 2018, iPad Air 2019, iPad Mini 2019):\n Connect the device using a USB cable., Quick-press the Volume Up button, Quick-press the Volume Down button, Hold down the Side button until the screen goes black, then hold down both the Side button and Volume Down button., After 5 seconds, release the Side button while continuing to hold down the Volume Down button., If the Apple logo appears, the Side button was held down for too long., Nothing will be displayed on the screen when the device is in DFU mode. If open, iTunes will alert you that a device was detected in recovery mode.\n Apple Watch, Connect to computer via iBUS adapter and lightning cable, Hold crown and power button (bottom right), Wait for the screen to go black, After 3 seconds of black, let go of the power button but continue to hold the crown, After about 5 seconds your watch will be in DFU mode")
     top.iconify()
     command="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
