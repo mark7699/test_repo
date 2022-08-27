@@ -106,7 +106,7 @@ def Unlock():
     command="gnome-terminal --window --full-screen"
     command="cd Desktop; sudo ./checkra1n"
     subprocess.call(command, shell=True)
-    top.deiconify()
+    top.iconify()
 
 
 def iPhon_Parser():
