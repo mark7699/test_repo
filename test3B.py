@@ -34,7 +34,7 @@ try:
                 subprocess.call(command, shell=True)
             else:
                 tk.messagebox.showinfo('Return', 'You will now return to the EXIT screen')
-                
+
         def _restart():
             MsgBox = tk.messagebox.askquestion('REBOOT', 'Are you sure you want to reboot?', icon='warning')
             if MsgBox == 'yes':
@@ -89,9 +89,10 @@ try:
 
 
     def andriod():
+        top.iconify()
         command="cd env/bin ; python3 andriller-gui.py"
         subprocess.call(command, shell=True)
-
+        top.deiconify()
 
     def opengqrx():
         command="gqrx"
