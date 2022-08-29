@@ -33,7 +33,7 @@ try:
             command = "poweroff"
             subprocess.call(command, shell=True)
 
-        def _restart
+        def _restart():
             MsgBox = tk.messagebox.askquestion('REBOOT', 'Are you sure you want to reboot?', icon='warning')
             if MsgBox == 'yes':
                 command = "reboot"
