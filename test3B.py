@@ -152,5 +152,5 @@ try:
     top.mainloop()
 
 except Exception as e:
-    with open("elogfile", "w") as f:
+    with open("errorfile", "w") as f:
         f.write(e)
