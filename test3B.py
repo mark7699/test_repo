@@ -109,7 +109,7 @@ def Unlock():
     top.iconify()
     command="cd"
     subprocess.run(command, shell=True)
-    cd /home/kali/Desktop; sudo ./checkra1n"
+    command="cd /home/kali/Desktop; sudo ./checkra1n"
     subprocess.run(command, shell=True)
     top.deiconify()
 
