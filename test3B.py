@@ -28,9 +28,10 @@ try:
         pop.attributes('-fullscreen', True)
 
         def _shutdown():
+            MsgBox = tk.messagebox.askquestion('Power Off', 'Are you sure?', icon='warning')
             command = "poweroff"
             subprocess.call(command, shell=True)
-            MsgBox = tk.messagebox.askquestion('Power Off', 'Are you sure?', icon='warning')
+            
 
 
         B4=Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command=_shutdown)
