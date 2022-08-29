@@ -102,6 +102,7 @@ def iPhone():
     msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
 def Unlock():
+    import subprocess
     top.option_add('*Font', 'Arial 10')
     top.option_add('*Dialog.msg.wrapLength', '7.5i')
     top.geometry("1000x1000")
