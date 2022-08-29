@@ -89,10 +89,9 @@ try:
 
 
     def andriod():
-        top.iconify()
         command="cd env/bin ; python3 andriller-gui.py"
         subprocess.call(command, shell=True)
-        top.deiconify()
+
 
     def opengqrx():
         command="gqrx"
