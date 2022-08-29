@@ -5,6 +5,7 @@ from tkinter import *
 
 from tkinter import messagebox
 import os
+import subprocess
 
 try:
 
@@ -115,7 +116,7 @@ try:
       subprocess.run(command, shell=True)
         # command = "sudo ./home/kali/Desktop/checkra1n"
         #subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      subprocess.run(command, shell=True)
+        #subprocess.run(command, shell=True)
       top.deiconify()
 
 
