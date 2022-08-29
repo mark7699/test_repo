@@ -28,18 +28,20 @@ try:
         pop.attributes('-fullscreen', True)
 
         def _shutdown():
-            MsgBox = tk.messagebox.askquestion('Power Off', 'Are you sure?', icon='warning')
-
-            command = "poweroff"
-            subprocess.call(command, shell=True)
-
+            MsgBox = tk.messagebox.askquestion('Power Off', 'Are you sure you want to power off?', icon='warning')
+            if MsgBox == 'yes':
+                command = "poweroff"
+                subprocess.call(command, shell=True)
+            else:
+                tk.messagebox.showinfo('Return', 'You will now return to the EXIT screen')
+                
         def _restart():
             MsgBox = tk.messagebox.askquestion('REBOOT', 'Are you sure you want to reboot?', icon='warning')
             if MsgBox == 'yes':
                 command = "reboot"
                 subprocess.call(command, shell=True)
             else:
-                tk.messagebox.showinfo('Return', 'You will now return to the application screen')
+                tk.messagebox.showinfo('Return', 'You will now return to the EXIT screen')
 
 
 
