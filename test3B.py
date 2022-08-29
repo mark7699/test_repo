@@ -29,13 +29,25 @@ try:
 
         def _shutdown():
             MsgBox = tk.messagebox.askquestion('Power Off', 'Are you sure?', icon='warning')
+
             command = "poweroff"
             subprocess.call(command, shell=True)
+
+        def _restart
+            MsgBox = tk.messagebox.askquestion('REBOOT', 'Are you sure you want to reboot?', icon='warning')
+            if MsgBox == 'yes':
+                command = "reboot"
+                subprocess.call(command, shell=True)
+            else:
+                tk.messagebox.showinfo('Return', 'You will now return to the application screen')
+
 
 
 
         B4=Button(pop, text="POWER\n OFF", bg="red", height=3, width=6, command=_shutdown)
         B4.place(x=350, y=400)
+        B6 = Button(pop, text="REBOOT", bg="blue", height=3, width=6, command=_restart )
+        B6.place(x=450, y=400)
         B=Button(pop, text="CANCEL", command=pop.destroy)
         B.place(x=200, y=200)
         count=0
