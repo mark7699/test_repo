@@ -123,6 +123,7 @@ try:
         msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
     def Unlock():
+        top.deiconify()
         command = "cd /home/kali/Desktop; sudo ./checkra1n"
         subprocess.call(command, shell=True)
         command = "quit"
