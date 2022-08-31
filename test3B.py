@@ -125,7 +125,7 @@ try:
 
     def Unlock():
         top.iconify()
-        command = "cd /home/kali/Desktop; sudo ./checkra1n; ctrl+c "
+        command = "cd /home/kali/Desktop; sudo ./checkra1n"
         subprocess.call(command, shell=True)
         #subprocess.call(command, shell=True)
 
