@@ -124,7 +124,7 @@ try:
         msg=messagebox.showinfo("iPhone Forensics Back Up", "Backup Complete of "+(p)+"& stored at /home/kali/CaseData")
 
     def Unlock():
-        subprocess.call("ls; exit", shell=True)
+        subprocess.call("ls", shell=True)
         top.iconify()
         top.deiconify()
         top.option_add('*Font', 'Arial 10')
