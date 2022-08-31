@@ -125,6 +125,7 @@ try:
     def Unlock():
         command = "cd /home/kali/Desktop; sudo ./checkra1n"
         subprocess.call(command, shell=True)
+        top.iconify()
         top.option_add('*Font', 'Arial 10')
         top.option_add('*Dialog.msg.wrapLength', '7.5i')
         top.geometry("1000x1000")
