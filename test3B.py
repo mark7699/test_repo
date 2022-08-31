@@ -125,8 +125,8 @@ try:
 
     def Unlock():
         top.iconify()
-        command = "cd /home/kali/Desktop; sudo ./checkra1n"
-        subprocess.call(command, shell=True)
+        #command = "cd /home/kali/Desktop; sudo ./checkra1n"
+        #subprocess.call(command, shell=True)
         #subprocess.call(command, shell=True)
 
         top.option_add('*Font', 'Arial 10')
