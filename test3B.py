@@ -8,7 +8,6 @@ import os
 import subprocess
 import keyboard
 
-try:
 
     top=Tk()
     Label_middle=tk.Label(top,text='ENGINEERING & FORENSIC SERVICES', fg="blue", font=("Arial", 30))
@@ -173,6 +172,3 @@ try:
     top.attributes('-fullscreen', True)
     top.mainloop()
 
-except Exception as e:
-    with open("errorfile", "w") as f:
-        f.write(e)
